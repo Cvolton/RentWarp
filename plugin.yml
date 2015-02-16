@@ -1,0 +1,60 @@
+name: RentWarp
+main: cz.michaelbrabec.plugins.rentwarp.RentWarpMain
+version: 1.2
+depend: [Vault]
+commands:
+  rentwarp:
+    description: Lets players to rent a warp
+    usage: /<command> <warpName> <timeInDays>
+    aliases: [buywarp, getwarp]
+    permission: rentwarp.rent
+  extendwarp:
+    description: Lets players to rent a warp
+    usage: /<command> <warpName> <timeInDays>
+    permission: rentwarp.extend
+  delwarp:
+    description: Lets you remove your own warp! You will NOT be refunded! Admins can use this command to remove somebody else's warp!
+    usage: /<command> <warpName>
+    permission: rentwarp.delete
+  warp:
+    description: Lets you warp to a warp defined by the RentWarp plugin!
+    usage: /<command> <warpName>
+    permission: rentwarp.warp
+  rwver:
+    description: Shows you the running version of RentWarp!
+    usage: /<command>
+    aliases: [rentwarpversion, rwversion, rentwarpver]
+    permission: rentwarp.version
+  setwarp:
+    description: Creates a permanent warp!
+    usage: /<command> <warpName>
+    permission: rentwarp.setwarp
+  convertwarp:
+    description: Converts a warp from the old system to the new one (used in 1.2 and newer versions)
+    usage: /<command> <warpName>
+    permission: rentwarp.convert
+permissions:
+   rentwarp.rent:
+     description: Allows you to rent a warp
+     default: true
+   rentwarp.extend:
+     description: Allows you to extend a warp
+     default: true
+   rentwarp.delete:
+     description: Allows you to delete your own warp
+     default: true
+   rentwarp.warp:
+     description: Allows you to teleport to a warp
+     default: true
+   rentwarp.version:
+     description: Allows you to see the version of the RentWarp plugin
+     default: op
+   rentwarp.setwarp:
+     description: Allows you to set a permanent warp (the usual use of /setwarp in other plugins)
+     default: op
+   rentwarp.admindelete:
+     description: "Allows you to delete any warp, that belongs to any user!"
+     default: op
+   rentwarp.convert:
+     description: "Allows you to convert a warp from the old system to the new used from 1.2"
+     default: op
